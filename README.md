@@ -11,3 +11,5 @@ For commit messages, please follow this format: `fix typos`, `add 'Title Example
 - File names should be written exactly the same as found on the repository
 - Use present tense
 - Give a good and short description of changes
+
+Since the project is built using Django, some knowledge of python and Django is required. If you are comfortable with python but now with Django, it is recommended that you watch [this series](https://youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p). If you are not comfortable with python yet, there are a lot of online resources to learn this language that it is hard to choose, but one good resource is [learnpython.org](https://www.learnpython.org).
