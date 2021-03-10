@@ -9,4 +9,14 @@ For commit messages, please follow this format: `fix typos`, `add 'Title Example
 - Use present tense
 - Give a good and short description of changes
 
+## Database
+To run the project in your local machine, you will probably need to set up a local database (which will be independent of that used for production). To do this, run the following commands inside the `website` folder.
+
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+
+After running this, the website should work without any problems.
+
 Since the project is built using Django, some knowledge of python and Django is required. If you are comfortable with python but now with Django, it is recommended that you watch [this series](https://youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p). If you are not comfortable with python yet, there are a lot of online resources to learn this language that it is hard to choose, but one good resource is [learnpython.org](https://www.learnpython.org).
