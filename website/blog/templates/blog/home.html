@@ -5,10 +5,13 @@
     {% for post in posts %}
         <article class="media content-section">
             <div class="media-body">
+                <!-- Article metadata -->
                 <div class="article-metadata">
                     <a class="me-2" href="#">{{ post.author }}</a>
                     <small class="text-muted">{{ post.date_posted | date:"F d, Y" }}</small>
                 </div>
+
+                <!-- Article title and tags -->
                 <div>
                     <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
                     <div style="display: flex;">
@@ -20,6 +23,8 @@
                     </div>
                 </div>
                 <br style="display: block; content: ''; margin-top: 0.4em;">
+
+                <!-- Article content -->
                 <p class="article-content">{{ post.content }}</p>
             </div>
         </article>
