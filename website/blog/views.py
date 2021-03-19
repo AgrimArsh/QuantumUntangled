@@ -16,9 +16,15 @@ def about(request):
     """
     return render(request, 'blog/about.html')
 
-def tag(request, tag):
+def tags_home(request):
     """
-    Tags page.
+    Tags home page.
+    """
+    return render(request, 'blog/tags_home.html')
+
+def tags(request, tag):
+    """
+    Specific tag page.
     """
     context = {
         'tag': tag,

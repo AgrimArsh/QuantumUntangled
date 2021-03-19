@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+{% load blog_tags %}
+
+{% block content %}
+
+    <article class="media content-section">
+        <div class="media-body">
+            <h2 class="article-title">Tags</h2>
+            <hr>
+            <p class="article-content" style="white-space: normal;">
+                Explore our articles by tags!
+            </p>
+            {% get_all_tags as tags %}
+            {% for tag in tags %}
+                <li><a href="{% url 'blog-tags' tag=tag.name|cut:' '  %}">{{ tag.name }}</a></li>
+            {% endfor %}
+        </div>
+    </article>
+
+{% endblock content %}
