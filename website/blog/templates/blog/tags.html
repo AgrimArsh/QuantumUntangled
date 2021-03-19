@@ -2,6 +2,12 @@
 
 {% block content %}
 
+    <article class="media content-section">
+        <div class="media-body">
+            <h2 class="article-title">Tag: {{ tag|title }}</h2>
+        </div>
+    </article>
+
     {% for post in posts %}
         <article class="media content-section">
             <div class="media-body">

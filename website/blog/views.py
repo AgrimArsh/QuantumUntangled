@@ -14,7 +14,14 @@ def about(request):
     """
     About page.
     """
-    context = {
-
-    }
     return render(request, 'blog/about.html')
+
+def tag(request, tag):
+    """
+    Tags page.
+    """
+    context = {
+        'tag': tag,
+        'posts': Article.objects.filter(tags__name=tag.capitalize())
+    }
+    return render(request, 'blog/tags.html', context)
