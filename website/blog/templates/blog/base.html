@@ -75,7 +75,7 @@
                       Show articles about:
                       <ul>
                         {% for tag in tags %}
-                            <li><a href="{% url 'blog-tags' tag=tag.name|cut:' '  %}">{{ tag.name }}</a></li>
+                          <li><a href="{% url 'blog-tags' tag=tag.name|cut:' '  %}">{{ tag.name }}</a></li>
                         {% endfor %}
                       </ul>
                     </div>
