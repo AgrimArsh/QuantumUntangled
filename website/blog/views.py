@@ -7,7 +7,7 @@ def home(request):
     Homepage for blog app. Passes all articles in context.
     """
     context = {
-        'posts': Article.objects.all(),
+        'posts': Article.objects.all().order_by('-date_posted'),
     }
     return render(request, 'blog/home.html', context)
 
@@ -29,7 +29,7 @@ def tags(request, tag):
     """
     context = {
         'tag': Tag.objects.filter(db_name__iexact=tag).first,
-        'posts': Article.objects.filter(tags__db_name__iexact=tag),
+        'posts': Article.objects.filter(tags__db_name__iexact=tag).order_by('-date_posted'),
     }
     return render(request, 'blog/tags.html', context)
 
@@ -45,6 +45,6 @@ def users(request, user):
     """
     context = {
         'user': User.objects.filter(username__iexact=user).first,
-        'posts': Article.objects.filter(author__username=user),
+        'posts': Article.objects.filter(author__username=user).order_by('-date_posted'),
     }
     return render(request, 'blog/users.html', context)
