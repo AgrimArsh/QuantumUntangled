@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .models import Article
+from django.contrib.auth.models import User
+from .models import Article, Tag
 
 def home(request):
     """
@@ -24,10 +25,26 @@ def tags_home(request):
 
 def tags(request, tag):
     """
-    Specific tag page. Uses tag specified by the url to fetch corresponding articles.
+    Specific tag page. Uses tag specified by url to fetch corresponding articles.
     """
     context = {
-        'tag': tag,
-        'posts': Article.objects.filter(tags__name=tag.capitalize())
+        'tag': Tag.objects.filter(db_name__iexact=tag).first,
+        'posts': Article.objects.filter(tags__db_name__iexact=tag),
     }
     return render(request, 'blog/tags.html', context)
+
+def users_home(request):
+    """
+    Users home page. Template uses custome template tag to fetch users.
+    """
+    return render(request, 'blog/users_home.html')
+
+def users(request, user):
+    """
+    Specific user page. Uses user specified by url to fetch corresponding articles.
+    """
+    context = {
+        'user': User.objects.filter(username__iexact=user).first,
+        'posts': Article.objects.filter(author__username=user),
+    }
+    return render(request, 'blog/users.html', context)

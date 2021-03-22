@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+{% load blog_tags %}
+
+{% block content %}
+
+    <article class="media content-section">
+        <div class="media-body">
+            <h2 class="article-title">Users</h2>
+            <hr>
+            <p class="article-content" style="white-space: normal;">
+                Explore our articles by user:
+            </p>
+            {% get_all_users as users %}
+            {% for user in users %}
+                <li><a href="{% url 'blog-users' user=user %}">{{ user }}</a></li>
+            {% endfor %}
+        </div>
+    </article>
+
+{% endblock content %}
