@@ -1,5 +1,5 @@
 # Quantum Untangled
-This project aims to make quantum computing accessible to people of all ages. We want to bring the basics of quantum mechanics and quantum computing to a wider public. We intend to do this through a website that will work as a hub for all-things quantum. The website is still under development now, but expect a working version by the summer of 2021.
+This project aims to make quantum computing accessible to people of all ages. We want to bring the basics of quantum mechanics and quantum computing to a wider public. We intend to do this through a website that will work as a hub for all-things quantum, from articles to interviews and open-source projects.
 
 This repository contains the code for the Quantum Untangled website. Status: under development, blog currently hosted at [Quantum Untangled](https://medium.com/quantum-untangled).
 
