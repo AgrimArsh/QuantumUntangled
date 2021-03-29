@@ -3,8 +3,13 @@
 {% block content %}
 
     <article class="media content-section">
+        <!-- Profile information -->
         <div class="media-body">
-            <h2 class="article-title">Articles by {{ user }}</h2>
+            <h2 class="article-title">{{ user.username }}</h2>
+            
+            <hr>
+
+            <p class="article-content"> {{ user.profile.bio }} </p>
         </div>
     </article>
 
@@ -28,6 +33,7 @@
                         {% endfor %}
                     </div>
                 </div>
+
                 <br style="display: block; content: ''; margin-top: 0.4em;">
 
                 <!-- Article content -->

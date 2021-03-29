@@ -44,7 +44,7 @@ def users(request, user):
     Specific user page. Uses user specified by url to fetch corresponding articles.
     """
     context = {
-        'user': User.objects.filter(username__iexact=user).first,
+        'user': User.objects.filter(username__iexact=user).select_related('profile').first,
         'posts': Article.objects.filter(author__username=user).order_by('-date_posted'),
     }
     return render(request, 'blog/users.html', context)
