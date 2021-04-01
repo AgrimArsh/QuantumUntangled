@@ -16,7 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# Wagtail imports
+from wagtail.admin import urls as wagtailadmin_urls
+from wagtail.core import urls as wagtail_urls
+from wagtail.documents import urls as wagtaildocs_urls
+
+# Serve user-uploaded files
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
+    # Wagtail paths
+    path('cms/', include(wagtailadmin_urls)),
+    path('documents/', include(wagtaildocs_urls)),
     path('admin/', admin.site.urls),
-    path('', include('blog.urls')),
-]
+    path('', include(wagtail_urls)),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # for deployment: https://docs.djangoproject.com/en/stable/howto/static-files/#serving-files-uploaded-by-a-user-during-development

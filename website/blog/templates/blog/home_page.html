@@ -1,0 +1,16 @@
+{% extends "blog/base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block content %}
+    <article class="media content-section">
+        <div class="media-body">
+            <!-- Home title -->
+            <h3>{{ self.title }}</h3>
+
+
+            <!-- Home content -->
+            <p class="article-content">{{ self.body|richtext }}</p>
+        </div>
+    </article>
+{% endblock %}

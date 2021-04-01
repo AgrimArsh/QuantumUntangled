@@ -1,4 +1,5 @@
 {% load static %}
+{% load wagtailcore_tags %}
 {% load blog_tags %}
 
 <!DOCTYPE html>
@@ -28,7 +29,7 @@
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #a80c0c;">
           <div class="container">
-            <a class="navbar-brand me-4" href="{% url 'blog-home' %}">Quantum Untangled</a>
+            <a class="navbar-brand me-4" href="{% slugurl 'home' %}">Quantum Untangled</a>
             
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -36,8 +37,8 @@
 
             <div class="collapse navbar-collapse" id="navbarToggle">
               <div class="navbar-nav me-auto">
-                <a class="nav-item nav-link" href="{% url 'blog-home' %}">Blog</a>
-                <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
+                <a class="nav-item nav-link" href="{% slugurl 'blog' %}">Blog</a>
+                <a class="nav-item nav-link" href="#">About</a>
               </div>
 
               <!-- Navbar Right Side -->
@@ -71,13 +72,7 @@
                   </h2>
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionSidebar">
                     <div class="accordion-body">
-                      {% get_all_tags as tags %}
-                      Show articles about:
-                      <ul>
-                        {% for tag in tags %}
-                          <li><a href="{% url 'blog-tags' tag=tag.db_name  %}">{{ tag.display_name }}</a></li>
-                        {% endfor %}
-                      </ul>
+                      Explore articles by <a href="{% slugurl 'tags' %}">tags</a>.
                     </div>
                   </div>
                 </div>

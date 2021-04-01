@@ -4,6 +4,106 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.utils import timezone
 
+# Wagtail
+from wagtail.core.models import Page
+from wagtail.core.fields import RichTextField, StreamField
+from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel, MultiFieldPanel
+from wagtail.search import index
+from wagtail.core import blocks
+from wagtail.images.blocks import ImageChooserBlock
+
+# Wagtail tagging
+from modelcluster.fields import ParentalKey
+from modelcluster.contrib.taggit import ClusterTaggableManager
+from taggit.models import TaggedItemBase
+
+# Home page
+class HomePage(Page):
+    body = RichTextField(blank=True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel('body', classname="full"),
+    ]
+
+# Show all published posts
+class PostIndexPage(Page):
+    intro = RichTextField(blank=True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel('intro', classname="full")
+    ]
+
+    def get_context(self, request):
+        # Include only published posts, ordered by reverse-chron
+        context = super().get_context(request)
+        blogpages = self.get_children().live().order_by('-first_published_at')
+        context['blogpages'] = blogpages
+        return context
+
+# Tag model for tagging posts
+class PostPageTag(TaggedItemBase):
+    content_object = ParentalKey(
+        'PostPage',
+        related_name='tagged_items',
+        on_delete=models.CASCADE
+    )
+
+# Show posts by tag 
+class PostTagIndexPage(Page):
+    intro = RichTextField(blank=True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel('intro', classname="full")
+    ]
+
+    def get_context(self, request):
+        if request.GET.get('tag'):
+            # Filter by tag
+            tag = request.GET.get('tag')
+            blogpages = PostPage.objects.live().filter(tags__name=tag)
+
+            # Update template context
+            context = super().get_context(request)
+            context['blogpages'] = blogpages
+        else: 
+            tags = []
+            post_pages = PostPage.objects.live()
+            for page in post_pages:
+                tags += page.tags.all()
+            tags = sorted(set(tags))
+
+            # Update template context
+            context = super().get_context(request)
+            context['tags'] = tags
+        
+        return context
+
+# Show post
+class PostPage(Page):
+    date = models.DateField("Post date")
+    intro = models.CharField(max_length=250)
+    tags = ClusterTaggableManager(through=PostPageTag, blank=True)
+    body = StreamField([
+        ('heading', blocks.CharBlock(form_classname="full title")),
+        ('html', blocks.RawHTMLBlock()),
+        ('rich_text', blocks.RichTextBlock()),
+        ('image', ImageChooserBlock()),
+    ])
+
+    search_fields = Page.search_fields + [
+        index.SearchField('intro'),
+        index.SearchField('body'),
+    ]
+
+    content_panels = Page.content_panels + [
+        MultiFieldPanel([
+            FieldPanel('date'),
+            FieldPanel('tags'),
+        ], heading="Blog information"),
+        FieldPanel('intro'),
+        StreamFieldPanel('body', classname="full"),
+    ]
+
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.TextField(max_length=500, blank=True)
