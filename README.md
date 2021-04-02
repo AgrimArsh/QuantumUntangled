@@ -8,5 +8,11 @@ This repository contains the code for the Quantum Untangled website. Status: und
 ## About us
 We are students of The Coding School’s Qubit by Qubit: Introduction to Quantum Computing course. We decided to start this project to promote the field of quantum, since we noticed that it is hard to get into it due to the math and physics requirements to understand most concepts.
 
+## Technologies
+The following technologies are being used to develop this website and should be installed prior to working on it:
+- [Python](https://www.python.org)
+- [Django](https://www.djangoproject.com)
+- [Wagtail CMS (Content Management System)](https://wagtail.io)
+
 ## Contributing
 For details on contributing, read [this file](https://github.com/epelaaez/Quantum-Untangled/blob/main/CONTRIBUTING.md).
