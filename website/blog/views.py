@@ -2,8 +2,6 @@ from django.shortcuts import render
 from django.contrib.auth.models import User
 from .models import Article, Tag
 
-# Adapt views to wagtail https://docs.wagtail.io/en/stable/getting_started/tutorial.html
-
 def home(request):
     """
     Homepage for blog app. Passes all articles in context.

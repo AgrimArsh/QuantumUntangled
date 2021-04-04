@@ -9,11 +9,14 @@
             <div class="article-metadata">
                 By <a class="me-2" href="#">{{ self.author }}</a>
                 on <small class="text-muted">{{ self.date | date:"F d, Y" }}</small>
+                {% if post.categories.all %}
+                    In{% for category in post.categories.all %} <a href="#">{{ category.name }}</a>.{% endfor %}
+                {% endif %}
             </div>
 
             <!-- Article title and tags -->
             <div>
-                <h2 class="article-title" >{{ self.title }}</h2>
+                <h2 class="article-title">{{ self.title }}</h2>
                 {% if self.tags.all.count %}
                     <div style="display: flex;">
                         {% for tag in self.tags.all %}
@@ -21,7 +24,6 @@
                                 <a href="{% slugurl 'tags' %}?tag={{ tag }}">{{ tag }}</a>
                             </div>
                         {% endfor %}
-                        
                     </div>
                 {% endif %}
             </div>

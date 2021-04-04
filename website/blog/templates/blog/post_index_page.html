@@ -5,7 +5,7 @@
 {% block content %}
 
     <article class="media content-section"> 
-        <h1>{{ page.title }}</h1>
+        <h2 class="article-title">{{ page.title }}</h2>
         <div class="intro">{{ page.intro|richtext }}</div>
     </article>
 
@@ -15,7 +15,10 @@
                 <div class="media-body">
                     <div class="article-metadata">
                         By <a class="me-2" href="#">{{ post.author }}</a>
-                        on <small class="text-muted">{{ post.date | date:"F d, Y" }}</small>
+                        on <small class="text-muted">{{ post.date | date:"F d, Y" }}.</small> 
+                        {% if post.categories.all %}
+                            In{% for category in post.categories.all %} <a href="#">{{ category.name }}</a>.{% endfor %}
+                        {% endif %}
                     </div>
         
                     <div>

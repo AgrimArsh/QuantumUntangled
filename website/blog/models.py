@@ -3,6 +3,7 @@ from django.dispatch import receiver
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils import timezone
+from django.forms import CheckboxSelectMultiple
 
 # Wagtail
 from wagtail.core.models import Page
@@ -13,9 +14,12 @@ from wagtail.core import blocks
 from wagtail.images.blocks import ImageChooserBlock
 
 # Wagtail tagging
-from modelcluster.fields import ParentalKey
+from modelcluster.fields import ParentalKey, ParentalManyToManyField
 from modelcluster.contrib.taggit import ClusterTaggableManager
-from taggit.models import TaggedItemBase
+from taggit.models import TaggedItemBase\
+
+# Wagtail snippets
+from wagtail.snippets.models import register_snippet
 
 # Home page
 class HomePage(Page):
@@ -40,7 +44,7 @@ class PostIndexPage(Page):
         context['blogpages'] = blogpages
         return context
 
-# Tag model for tagging posts
+# Tag model for tagging posts. Authors can add tags to their posts.
 class PostPageTag(TaggedItemBase):
     content_object = ParentalKey(
         'PostPage',
@@ -83,6 +87,7 @@ class PostPage(Page):
     date = models.DateField("Post date")
     intro = models.CharField(max_length=250)
     tags = ClusterTaggableManager(through=PostPageTag, blank=True)
+    categories = ParentalManyToManyField('blog.PostCategory', blank=True)
     body = StreamField([
         ('heading', blocks.CharBlock(form_classname="full title")),
         ('html', blocks.RawHTMLBlock()),
@@ -99,7 +104,8 @@ class PostPage(Page):
         MultiFieldPanel([
             FieldPanel('date'),
             FieldPanel('tags'),
-        ], heading="Blog information"),
+            FieldPanel('categories', widget=CheckboxSelectMultiple),
+        ], heading="Post information"),
         FieldPanel('intro'),
         StreamFieldPanel('body', classname="full"),
     ]
@@ -110,6 +116,20 @@ class Profile(models.Model):
 
     def __str__(self):
         return f'{self.user}'
+
+@register_snippet
+class PostCategory(models.Model):
+    name = models.CharField(max_length=255)
+
+    panels = [
+        FieldPanel('name'),
+    ]
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = 'post categories'
 
 # Create Profile when creating user (https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#disqus_thread)
 @receiver(post_save, sender=User)
