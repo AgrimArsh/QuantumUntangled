@@ -4,9 +4,9 @@
 
 {% block content %}
 
-    {% if request.GET.tag|length %}
+    {% if request.GET.category|length %}
         <article class="media content-section"> 
-            <h3>Showing posts tagged "{{ request.GET.tag }}"</h3>
+            <h3>Category: {{ request.GET.category }}</h3>
         </article>
 
         {% for post in postpages %}
@@ -46,10 +46,10 @@
         </article>
 
         <article class="media content-section">
-            Show articles about:
+            Show articles categorized:
             <ul>
-              {% for tag in tags %}
-                <li><a href="{% slugurl 'tags' %}?tag={{ tag }}">{{ tag.name }}</a></li>
+              {% for category in categories %}
+                <li><a href="{% slugurl 'categories' %}?category={{ category }}">{{ category.name }}</a></li>
               {% endfor %}
             </ul>
         </article>

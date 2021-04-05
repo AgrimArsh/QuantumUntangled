@@ -9,8 +9,8 @@
             <div class="article-metadata">
                 By <a class="me-2" href="#">{{ self.author }}</a>
                 on <small class="text-muted">{{ self.date | date:"F d, Y" }}</small>
-                {% if post.categories.all %}
-                    In{% for category in post.categories.all %} <a href="#">{{ category.name }}</a>.{% endfor %}
+                {% if self.categories.all %}
+                    In{% for category in self.categories.all %} <a href="{% slugurl 'categories' %}?category={{ category }}">{{ category.name }}</a>.{% endfor %}
                 {% endif %}
             </div>
 
