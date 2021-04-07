@@ -96,3 +96,14 @@ a.article-metadata {
 .account-heading {
     font-size: 2.5rem;
 }
+
+.btn-outline-submit {
+    color: #a80c0c;
+    border-color: #a80c0c;
+}
+
+.btn-outline-submit:hover {
+    color: #fff;
+    background-color: #a80c0c;
+    border-color: #a80c0c;
+}

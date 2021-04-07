@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from users import views as users_views
 
 # Wagtail imports
 from wagtail.admin import urls as wagtailadmin_urls
@@ -26,6 +27,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    # Created paths
+    path('register/', users_views.register, name='users-register'),
+
     # Wagtail paths
     path('cms/', include(wagtailadmin_urls)),
     path('documents/', include(wagtaildocs_urls)),

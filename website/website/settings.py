@@ -32,13 +32,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # Created apps
     'blog.apps.BlogConfig',
+    'users.apps.UsersConfig',
+
+    # Django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
 
     # Wagtail necessary apps
     'wagtail.contrib.forms',
@@ -143,4 +148,8 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+# Wagtail config
 WAGTAIL_SITE_NAME = 'Quantum Untangled'
+
+# Crispy forms config
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
