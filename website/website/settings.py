@@ -153,3 +153,7 @@ WAGTAIL_SITE_NAME = 'Quantum Untangled'
 
 # Crispy forms config
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Login redirect
+LOGIN_REDIRECT_URL = '/blog'
+LOGIN_URL = 'users-login'
