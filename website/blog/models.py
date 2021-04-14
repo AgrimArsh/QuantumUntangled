@@ -156,6 +156,36 @@ class PostCategoryIndexPage(Page):
         
         return context
 
+# Show posts by user 
+class PostUserIndexPage(Page):
+    intro = RichTextField(blank=True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel('intro', classname="full")
+    ]
+
+    def get_context(self, request):
+        if request.GET.get('user'):
+            # Filter by category
+            user = request.GET.get('user')
+            postpages = PostPage.objects.live().filter(owner__username=user)
+
+            # Update template context
+            context = super().get_context(request)
+            context['postpages'] = postpages
+        else: 
+            users = []
+            post_pages = PostPage.objects.live()
+            for page in post_pages:
+                users.append(page.owner)
+            users = sorted(set(users))
+
+            # Update template context
+            context = super().get_context(request)
+            context['users'] = users
+        
+        return context
+
 #################### Native Django models ####################
 # Create Profile when creating user (https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#disqus_thread)
 class Profile(models.Model):

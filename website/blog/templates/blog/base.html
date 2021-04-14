@@ -63,7 +63,9 @@
     <main role="main" class="container">
         <div class="row">
           <div class="col-md-8">
-            <!-- Flash messages -->
+            <!-- Flash messages 
+            Django returns "error" tag but Boostrap v5 uses "danger", hence the ifequal statement.
+            -->
             {% if messages %}
               {% for message in messages %}
                 {% ifequal message.tags "error" %}

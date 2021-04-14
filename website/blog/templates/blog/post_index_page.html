@@ -14,7 +14,7 @@
             <article class="media content-section">
                 <div class="media-body">
                     <div class="article-metadata">
-                        By <a href="#">{{ post.owner }}</a>
+                        By <a href="{% slugurl 'users' %}?user={{ post.owner }}">{{ post.owner }}</a>
                         on <small class="text-muted">{{ post.date | date:"F d, Y" }}.</small> 
                         {% if post.categories.all %}
                             In{% for category in post.categories.all %} <a href="{% slugurl 'categories' %}?category={{ category }}">{{ category.name }}</a>.{% endfor %}
