@@ -14,5 +14,15 @@ The following technologies are being used to develop this website and should be 
 - [Django](https://www.djangoproject.com)
 - [Wagtail CMS (Content Management System)](https://wagtail.io)
 
+## GitHub pages
+While the development of a full stack website is underway, a static website powered by GitHub pages will be available. The code for this website is also available in this repo under the `gh-pages` branch. In order to work on this branch on your local machine, run the following commands after you have cloned the repo from the `main` branch.
+
+```
+git switch gh-pages
+git checkout gh-pages
+```
+
+Now, you can use the command `git checkout [branch-name]` to switch between the `main` and the `gh-pages` branches and work on both.
+
 ## Contributing
 For details on contributing, read [this file](https://github.com/epelaaez/Quantum-Untangled/blob/main/CONTRIBUTING.md).
