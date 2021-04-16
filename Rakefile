@@ -7,16 +7,20 @@ task :deploy do
   puts "## Generating site"
   system "grunt build"
 
-  cd "_site" do
-    system "git add -A"
+  puts "## Deleting current docs directory"
+  system "rmdir docs /s"
 
-    message = "Site updated at #{Time.now.utc}"
-    puts "## Commiting: #{message}"
-    system "git commit -m \"#{message}\""
+  puts "## Copying _site into new docs directory"
+  system "xcopy _site docs"
 
-    puts "## Pushing generated site"
-    system "git push"
+  system "git add -A"
 
-    puts "## Deploy Complete!"
-  end
+  message = "Site updated at #{Time.now.utc}"
+  puts "## Commiting: #{message}"
+  system "git commit -m \"#{message}\""
+
+  puts "## Pushing generated site"
+  system "git push"
+
+  puts "## Deploy Complete!"
 end
