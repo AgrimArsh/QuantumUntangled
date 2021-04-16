@@ -1,8 +1,8 @@
 {
   "name": "quantum-untangled",
   "version": "1.0.0",
-  "description": "<img align=\"right\" width=\"60\" height=\"60\" src=\"media/logo.png\" alt=\"Quantum Untangled logo icon\">",
-  "main": "index.js",
+  "description": "Quantum Untangled blog",
+  "main": "_site/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/epelaaez/Quantum-Untangled/issues"
   },
-  "homepage": "https://github.com/epelaaez/Quantum-Untangled#readme",
+  "homepage": "https://github.com/epelaaez/Quantum-Untangled",
   "devDependencies": {
     "grunt": "^1.3.0",
     "grunt-bower-task": "^0.5.0",
