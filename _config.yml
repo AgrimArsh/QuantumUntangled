@@ -28,6 +28,12 @@ exclude:
   - README.md
   - CNAME
   - assets/sass
+  - "bower_components"
+  - "bower.json"
+  - "node_modules"
+  - "package.json"
+  - "Gruntfile.coffee"
+  - "Rakefile"
 
 # Plugin settings
 plugins:

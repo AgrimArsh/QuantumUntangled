@@ -1,7 +1,9 @@
-_site
 .sass-cache
 .jekyll-metadata
 .DS_Store
 node_modules
 .vscode
 env
+/bower_components/
+/node_modules/
+/vendor/
