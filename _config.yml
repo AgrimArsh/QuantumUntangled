@@ -26,6 +26,7 @@ sass:
 exclude:
   - package.json
   - README.md
+  - docs/
   - CNAME
   - assets/sass
   - "bower_components"
@@ -34,6 +35,9 @@ exclude:
   - "package.json"
   - "Gruntfile.coffee"
   - "Rakefile"
+
+include:
+  - .nojekyll
 
 # Plugin settings
 plugins:
