@@ -13,7 +13,7 @@ task :deploy do
   puts "## Copying _site into new docs directory"
   system "xcopy _site docs /s"
 
-  system "git add -A"
+  system "git add docs"
 
   message = "Site updated at #{Time.now.utc}"
   puts "## Commiting: #{message}"
