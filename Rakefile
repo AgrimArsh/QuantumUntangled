@@ -11,7 +11,7 @@ task :deploy do
   system "rmdir docs /s"
 
   puts "## Copying _site into new docs directory"
-  system "xcopy _site docs"
+  system "xcopy _site docs /s"
 
   system "git add -A"
 
