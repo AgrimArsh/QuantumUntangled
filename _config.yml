@@ -6,13 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your awesome title
+title: Quantum Untangled
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  An open-source community making quantum computing, physics, mathematics and all the related fields
+  accessible to audiences from all levels of expertise.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "https://epelaaez.github.io/Quantum-Untangled/" # the base hostname & protocol for your site
 
 # Markdown settings
 markdown: kramdown
