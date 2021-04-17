@@ -1,7 +1,7 @@
 require "rubygems"
 
-desc "Deploy to Github Pages"
-task :deploy do
+desc "Deploy docs directory to Github Pages"
+task :deploy, [:arg1] do |t, args|
   puts "## Deploying to Github Pages"
 
   puts "## Generating site"
@@ -15,12 +15,14 @@ task :deploy do
 
   system "git add docs"
 
-  message = "Site updated at #{Time.now.utc}"
+  message = "#{Time.now.utc}: #{args[:arg1]}"
   puts "## Commiting: #{message}"
   system "git commit -m \"#{message}\""
 
   puts "## Pushing generated site"
   system "git push"
+
+  puts "## Deploy Complete!"
 
   puts "## Deploy Complete!"
 end
