@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://epelaaez.github.io/Quantum-Untangled//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.6.3">Jekyll</generator><link href="https://epelaaez.github.io/Quantum-Untangled//feed.xml" rel="self" type="application/atom+xml" /><link href="https://epelaaez.github.io/Quantum-Untangled//" rel="alternate" type="text/html" /><updated>2021-04-16T14:41:47-05:00</updated><id>https://epelaaez.github.io/Quantum-Untangled///</id><title type="html">Quantum Untangled</title><subtitle>An open-source community making quantum computing, physics, mathematics and all the related fields accessible to audiences from all levels of expertise.
-</subtitle><entry><title type="html">Vectors and Scalars — Linear Algebra for QC</title><link href="https://epelaaez.github.io/Quantum-Untangled//2021/02/02/Vectors-and-Scalars-Linear-Algebra-for-QC.html" rel="alternate" type="text/html" title="Vectors and Scalars — Linear Algebra for QC" /><published>2021-02-02T00:00:00-06:00</published><updated>2021-02-02T00:00:00-06:00</updated><id>https://epelaaez.github.io/Quantum-Untangled//2021/02/02/Vectors-and-Scalars---Linear-Algebra-for-QC</id><content type="html" xml:base="https://epelaaez.github.io/Quantum-Untangled//2021/02/02/Vectors-and-Scalars-Linear-Algebra-for-QC.html">&lt;h1 id=&quot;vectors-and-scalarslinear-algebra-for-qc&quot;&gt;Vectors and Scalars — Linear Algebra for QC&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://epelaaez.github.io/Quantum-Untangled/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.6.3">Jekyll</generator><link href="https://epelaaez.github.io/Quantum-Untangled/feed.xml" rel="self" type="application/atom+xml" /><link href="https://epelaaez.github.io/Quantum-Untangled/" rel="alternate" type="text/html" /><updated>2021-04-17T09:17:57-05:00</updated><id>https://epelaaez.github.io/Quantum-Untangled//</id><title type="html">Quantum Untangled</title><subtitle>An open-source community making quantum computing, physics, mathematics and all the related fields accessible to audiences from all levels of expertise.
+</subtitle><entry><title type="html">Vectors and Scalars — Linear Algebra for QC</title><link href="https://epelaaez.github.io/Quantum-Untangled/2021/02/02/Vectors-and-Scalars-Linear-Algebra-for-QC.html" rel="alternate" type="text/html" title="Vectors and Scalars — Linear Algebra for QC" /><published>2021-02-02T00:00:00-06:00</published><updated>2021-02-02T00:00:00-06:00</updated><id>https://epelaaez.github.io/Quantum-Untangled/2021/02/02/Vectors-and-Scalars---Linear-Algebra-for-QC</id><content type="html" xml:base="https://epelaaez.github.io/Quantum-Untangled/2021/02/02/Vectors-and-Scalars-Linear-Algebra-for-QC.html">&lt;h1 id=&quot;vectors-and-scalarslinear-algebra-for-qc&quot;&gt;Vectors and Scalars — Linear Algebra for QC&lt;/h1&gt;
 
 &lt;p&gt;In this first article discussing linear algebra for quantum computing we are going to give you a quick introduction to vectos and scalars.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-02-02/0__Nu4R65gKOG9DfK5P.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://epelaaez.github.io/Quantum-Untangled/assets/images/2021-02-02/0__Nu4R65gKOG9DfK5P.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;It’s no secret that linear algebra is what allows us to represent quantum computing in a much more intuitive way, abstracting some concepts of quantum mechanics that are to complicated to work with for the purpose of quantum algorithms. Because of this, it is important to have a clear understanding of the basic concepts of linear algebra and to know how to work with them.&lt;/p&gt;
 
@@ -15,7 +15,7 @@
 
 &lt;h3 id=&quot;vectors&quot;&gt;Vectors&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-02-02/0__ilY3YlRw__hHHhRCM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://epelaaez.github.io/Quantum-Untangled/assets/images/2021-02-02/0__ilY3YlRw__hHHhRCM.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The image above may seem a little daunting at first, but it really isn’t. Let’s see what is going on step by step. First, we can see that we have three axes of real numbers: &lt;strong&gt;x&lt;/strong&gt;, &lt;strong&gt;y&lt;/strong&gt; and &lt;strong&gt;z&lt;/strong&gt;. These three axes make up three dimensional Euclidean space (a particular type of Hilbert space, which we will study more in depth later in the series). Along these three axis you can see that we have three vectors: &lt;strong&gt;Fx&lt;/strong&gt;, &lt;strong&gt;Fy&lt;/strong&gt;, and &lt;strong&gt;Fz&lt;/strong&gt; which are identified by an arrow on top of the letter. This convention of writing vectors with an arrow is really common, but not used everywhere. You can also see vectors denoted by bold letters or by context only. To avoid heavy notation, we are not going to use bold letters or an arrow or top, but we will indicate when we are talking about vectors.&lt;/p&gt;
 
@@ -35,31 +35,31 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-02-02/1__QSOqZ__X0__xl__bP0e1Upg3A.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://epelaaez.github.io/Quantum-Untangled/assets/images/2021-02-02/1__QSOqZ__X0__xl__bP0e1Upg3A.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;More rigorously, we define each of this vectors the following way.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-02-02/1__IrsrnI0WPZAbUsbKbgBfJA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://epelaaez.github.io/Quantum-Untangled/assets/images/2021-02-02/1__IrsrnI0WPZAbUsbKbgBfJA.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;It’s important to be aware that even though we define these vectors with coordinates they are not points. The coordinate tells us which point the vectors points to, but the vector itself is not a point. Now it’s pretty easy to see that our original vector &lt;strong&gt;S&lt;/strong&gt; is composed by the sum of each of its components.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-02-02/1__rdRg0BmQPTG8zv1jFl__hMg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://epelaaez.github.io/Quantum-Untangled/assets/images/2021-02-02/1__rdRg0BmQPTG8zv1jFl__hMg.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;However, we can add even more simplicity to this. Go back and give another look at the image at the beginning of this section. You may notice that there are three red vectors we have not talked about yet. This are what are commonly reffered to as unit vectors and are denoted by the letter &lt;strong&gt;i&lt;/strong&gt;, &lt;strong&gt;j&lt;/strong&gt;, and &lt;strong&gt;k&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;These unit vectors are a really powerful tool when describing other more complex vectors. I can describe them to you, but it’s easier if I show you what they mean.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-02-02/1__FBvAP9pqZHT2K4B7gal7Tw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://epelaaez.github.io/Quantum-Untangled/assets/images/2021-02-02/1__FBvAP9pqZHT2K4B7gal7Tw.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As you can see, each of this vectors goes one unit along one axis, therefore the name unit vectors. These vectors are powerful because we can describe any other vector as a combination of these three. Let’s turn back to our example with vector &lt;strong&gt;S&lt;/strong&gt;. From our previous explanation, we know that &lt;strong&gt;S&lt;/strong&gt; goes three units along the &lt;strong&gt;x&lt;/strong&gt; axis, two units along the &lt;strong&gt;y&lt;/strong&gt; axis and five units along the &lt;strong&gt;z&lt;/strong&gt; axis. Therefore, we can write it the following way.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-02-02/1__LJ0rgPxz1Py__ndRfurlA5Q.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://epelaaez.github.io/Quantum-Untangled/assets/images/2021-02-02/1__LJ0rgPxz1Py__ndRfurlA5Q.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We can see that this is way simpler that having it to write as three different vectors that we need to define beforehand. You can simply multiply each unit vector times the length the vector extends along that axis and sum all the unit vectors.&lt;/p&gt;
 
 &lt;p&gt;Let’s see some examples.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-02-02/1__MM4a5iURyXxmg9X32wGmFQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://epelaaez.github.io/Quantum-Untangled/assets/images/2021-02-02/1__MM4a5iURyXxmg9X32wGmFQ.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As you can see with the examples above, you can multiply the unit vectors by any real number to compose any vector in real three-dimensional space. By real three-dimensional space we refer to those vectors that have a real number in each of its components, i.e. no complex numbers are allowed.&lt;/p&gt;
 
@@ -69,7 +69,7 @@
 
 &lt;p&gt;Suppose you have two &lt;strong&gt;N-dimensional&lt;/strong&gt; vectors &lt;strong&gt;A&lt;/strong&gt; and &lt;strong&gt;B&lt;/strong&gt; that you want to add. If you represent these two vectors as coordinates, there is no good looking way (syntax-wise) of writing their sum. But using unit vectors, we can write their sum as a sum through &lt;strong&gt;n&lt;/strong&gt; elements.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-02-02/1__1VVRGckS9CB6vB7XTLq5hg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://epelaaez.github.io/Quantum-Untangled/assets/images/2021-02-02/1__1VVRGckS9CB6vB7XTLq5hg.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;When working with dimensions larger than three, we stop using our convention of writing the unit vectors as &lt;strong&gt;i&lt;/strong&gt;, &lt;strong&gt;j&lt;/strong&gt;, and &lt;strong&gt;k&lt;/strong&gt; and simply use &lt;strong&gt;x&lt;/strong&gt; with a subindex corresponding to the dimension it goes along.&lt;/p&gt;
 
@@ -85,11 +85,11 @@
 
 &lt;p&gt;And we’ve already seen how scalars and vectors interact with each other above, but let’s talk about it. You can multiply a vector by a scalar and you will either stretch or compress the vector, but it will stay in the same direction. Let’s take for example the vector &lt;strong&gt;i+2j+3k&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-02-02/1__vAkIr1TZla1ZNqRZxi96cQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://epelaaez.github.io/Quantum-Untangled/assets/images/2021-02-02/1__vAkIr1TZla1ZNqRZxi96cQ.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In this ilustration, the red axis is the &lt;strong&gt;x&lt;/strong&gt; axis, the green axis is the &lt;strong&gt;y&lt;/strong&gt; axis and the blue axis is the &lt;strong&gt;z&lt;/strong&gt; axis. Now, let’s take this vector and multiply by two. Using unit vector notation, we get &lt;strong&gt;2(i+2j+3k)=2i+4j+6k&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-02-02/1__fBE5Adb2htT3AXSHj__T4Vg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://epelaaez.github.io/Quantum-Untangled/assets/images/2021-02-02/1__fBE5Adb2htT3AXSHj__T4Vg.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As you can see in this graph, both vectors are pointing the same way, but the black vector extends twice as far. This is what scalar-vector multiplication looks like graphically, it is really simple to see it this way and even simpler when working with unit vector notation since you can use the usual arithmetic rules.&lt;/p&gt;
 
@@ -101,7 +101,7 @@
 
 &lt;p&gt;The dot product (denoted as a dot, e.g. A · B) between two n-dimensional vectors &lt;strong&gt;A&lt;/strong&gt; and &lt;strong&gt;B&lt;/strong&gt; is defined as follows:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-02-02/1__iEUWXoaEOuAi2Zuaa111Hg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://epelaaez.github.io/Quantum-Untangled/assets/images/2021-02-02/1__iEUWXoaEOuAi2Zuaa111Hg.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;But how can we know how similar two vectors are only from the dot product? Well, there are some important values to remember. Suppose you have two unit — or normalized — vectors (their total length is 1) &lt;strong&gt;A&lt;/strong&gt; and &lt;strong&gt;B&lt;/strong&gt;, then:&lt;/p&gt;
 
@@ -113,7 +113,7 @@
 
 &lt;p&gt;And since the values an angle can take are continuos, anything between the three values above represent a specific angle. For example, if we get that &lt;strong&gt;A · B=0.6&lt;/strong&gt;, we know that the vectors are somwhere in between forming a 90° angle and being parallel, and closer to the latter option. The following image illustrates this concept.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2021-02-02/1__U5lOQHgPbZwwPxGFPpV7ww.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://epelaaez.github.io/Quantum-Untangled/assets/images/2021-02-02/1__U5lOQHgPbZwwPxGFPpV7ww.jpeg&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This concept of comparing two vectors through the dot product is extremely useful in quantum computing, specially when you want to see how similar two quantum states are and what’s the probability of your qubit collapsing to one specific state. But we will discuss this later on in the series.&lt;/p&gt;
 
