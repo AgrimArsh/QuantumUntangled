@@ -1,3 +1,6 @@
+# jekyll-paginate configuration
+paginate: 5
+
 # Site settings
 title: Quantum Untangled
 description: An open-source community making quantum computing accesible.
@@ -9,9 +12,6 @@ markdown:    kramdown
 highlighter: rouge
 permalink:   none
 plugins:     [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
-
-# jekyll-paginate configuration
-paginate: 5
 
 # Sass settings
 sass:

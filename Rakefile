@@ -14,6 +14,4 @@ task :deploy, [:arg1] do |t, args|
   system "git push"
 
   puts "## Deploy Complete!"
-
-  puts "## Deploy Complete!"
 end

@@ -1,10 +1,13 @@
 .page-content {
-  width: 600px;
+  width: 700px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.page-content p {
+  text-align: justify;
 }
 .post-date {
   display: block;
@@ -63,6 +66,9 @@
 .related {
   padding-bottom: 1rem;
 }
+.related a {
+  text-decoration: none;
+}
 .related ul, ol, dl {
   margin: 0px;
 }
@@ -88,9 +94,15 @@
           transform: translate(-50%,-50%);
 }
 .related-title {
-  float: right;
+  text-align: right;
+  font-family: $base-font-family;
+}
+.related-meta {
+  text-align: right;
   padding-bottom: .5rem;
   font-family: $base-font-family;
+  font-size: medium;
+  font-weight: lighter;
 }
 @media (max-width: $container-width) {
   .related-thumbnail{

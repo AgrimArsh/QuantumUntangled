@@ -56,13 +56,18 @@ layout: default
                 <a href="{{ site.github.url }}{{ mypost.url }}">
                   <div class="related-thumbnail">
                     {% if mypost.image %}
-                      <img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ mypost.image }}">
+                      <img src="{{ site.github.url }}/assets/images/{{ mypost.image }}">
                     {% endif %}
                   </div>
                   <div class="related-title">
                     {{ mypost.title }}
                   </div>
-                  <!--<small>{{ mypost.date | date: "%B %-d, %Y" }}</small>-->
+                  <div class="related-meta">
+                    {{ mypost.date | date: "%B %-d, %Y" }}
+                    {% if page.author %}
+                      by {{ page.author }}
+                    {% endif %}
+                  </div>
                 </a>
               </h3>
             </li>
