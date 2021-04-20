@@ -6,7 +6,7 @@ task :deploy, [:arg1] do |t, args|
 
   system "git add ."
 
-  message = "#{Time.now.utc}: #{args[:arg1]}"
+  message = "#{Time.now.utc} #{args[:arg1]}"
   puts "## Commiting: #{message}"
   system "git commit -m \"#{message}\""
 
