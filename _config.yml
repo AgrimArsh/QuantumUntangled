@@ -1,38 +1,19 @@
 # Site settings
 title: Quantum Untangled
-description: > # this means to ignore newlines until "baseurl:"
-  An open-source community making quantum computing, physics, mathematics and all the related fields
-  accessible to audiences from all levels of expertise.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://epelaaez.github.io/Quantum-Untangled" # the base hostname & protocol for your site
+description: An open-source community making quantum computing accesible.
+baseurl: ""
+url: "https://epelaaez.github.io/Quantum-Untangled"
 
-# Markdown settings
-markdown: kramdown
+# Build settings
+markdown:    kramdown
+highlighter: rouge
+permalink:   none
+plugins:     [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+
+# jekyll-paginate configuration
+paginate: 5
 
 # Sass settings
 sass:
-  add_charset: true
-  sass_dir: assets/sass
-  style: :compressed
-
-# Build settings
-exclude:
-  - package.json
-  - README.md
-  - docs
-  - CNAME
-  - assets/sass
-  - "bower_components"
-  - "bower.json"
-  - "node_modules"
-  - "package.json"
-  - "Gruntfile.coffee"
-  - "Rakefile"
-
-include:
-  - .nojekyll
-
-# Plugin settings
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
+  sass_dir: assets/css
+  style: :nested

@@ -1,7 +1,10 @@
 ---
-layout: default
-title:  Vectors and Scalars — Linear Algebra for QC
-tags:   linear-algebra mathematics
+layout: post
+title:  "Vectors and Scalars — Linear Algebra for QC"
+author: "Emilio Pelaez"
+categories: education
+tags:   [linear-algebra,mathematics]
+image: 2021-02-02/0__Nu4R65gKOG9DfK5P.png
 ---
 
 # Vectors and Scalars — Linear Algebra for QC
@@ -119,7 +122,3 @@ Right now it may not seem that you are going to use these when working in quantu
 With this said, I hope that you found this information useful and I encourage you to follow [Quantum Untangled](https://medium.com/quantum-untangled) to make sure you don’t miss future publications in this and more series to come!
 
 By [Emilio Peláez](https://medium.com/@epelaaez) on [February 2, 2021](https://medium.com/p/ee1e25278f77).
-
-[Canonical link](https://medium.com/@epelaaez/vectors-and-scalars-linear-algebra-for-qc-ee1e25278f77)
-
-Exported from [Medium](https://medium.com) on April 16, 2021.

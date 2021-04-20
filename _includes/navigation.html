@@ -1,7 +1,0 @@
-<nav>
-    {% for item in site.data.navigation %}
-      <a href="{{item.url | prepend: site.baseurl | prepend: site.url }}" {% if item.url == page.url %}class="active"{% endif %}>
-        {{ item.title }}
-      </a>
-    {% endfor %}
-</nav>

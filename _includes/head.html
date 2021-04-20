@@ -1,26 +1,38 @@
 <head>
-  <!-- Meta tags -->
+
+  <title>
+    {% if page.title == "Home" %}
+      {{ site.title }} | {{ site.description }}
+    {% else %}
+      {{ page.title }} | {{ site.title }}
+    {% endif %}
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  
-  <!-- Title -->
-  {% if page.title %}
-    <title> {{ page.title | escape }} </title>
-  {% else %}
-    <title> {{ site.title | escape }} </title>
-  {% endif %}
 
-  <!-- Links -->
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="canonical" href="{{ replace:"index.html","" | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="shortcut icon" href="{{ "/assets/images/favicon.ico" | prepend: site.baseurl | prepend: site.url }}" />
-
-  <!-- Boostrap -->
-  <link rel="stylesheet" href="{{ "/vendor/css/bootstrap.min.css" | prepend: site.baseurl | prepend: site.url }}">
-  <script src="{{ "/vendor/js/jquery.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
-  <script src="{{ "/vendor/js/bootstrap.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+  <link rel="stylesheet" href="{{ site.github.url }}/assets/css/main.css">
+  <link rel="stylesheet" href="{{ site.github.url }}/assets/css/syntax.css">
   
+  <!-- Use Atom -->
   {% feed_meta %}
+  <!-- RSS-v2.0
+  <link href="{{ site.github.url }}/rss-feed.xml" type="application/rss+xml" rel="alternate" title="{{ site.title }} | {{ site.description }}"/>
+  //-->
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics 
+  {% include google-analytics.html %}
+  -->
+
+  <!-- Use Jekyll SEO plugin -->
+  {% seo %}
+
 </head>

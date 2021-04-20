@@ -1,11 +1,17 @@
----
-layout: base
----
+<!doctype html>
+<html>
 
-<main class="main" aria-label="Content">
-  {% include navigation.html %}
+{% include head.html %}
 
-  {{ content }}
+<body>
 
-  <!-- Include footer here -->
-</main>
+<div class="container">
+  {% include header.html %}
+  <div class="posts-wrapper">
+    {{ content }}
+  </div>
+  {% include footer.html %}
+</div>
+
+</body>
+</html>
