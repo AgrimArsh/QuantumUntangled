@@ -5,9 +5,8 @@ disqus:
 google-ID: ''
 
 menu:
-- {name: 'Quantum Untangled', folder: 'pages', file: 'home.html'}
-- {name: 'Posts', folder: 'pages', file: 'posts.html'}
 - {name: 'About', folder: 'pages', file: 'about.html'}
+- {name: 'Contact', folder: 'pages', file: 'Contact.html'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 # social:

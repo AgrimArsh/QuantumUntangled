@@ -12,11 +12,10 @@
   color: #9a9a9a;
   font-size:0.8rem;
 }
-.featured-image img {
-  align: middle;
-  margin: 5px auto 25px;
-  display: block;
-  max-width: 600px;
+.tag-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin: 0 0.5em 0 0;
+  padding: 0.2em;
 }
 @media (max-width: $container-width) {
   .page-content {

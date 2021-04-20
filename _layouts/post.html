@@ -24,12 +24,11 @@ layout: default
       {{ site.author }}
     {% endif %}
   </span>
-
-  {% if page.image %}
-    <div class="featured-image">
-      <img src="{{ site.github.url }}/assets/img/{{ page.image }}">
-    </div>
-  {% endif %}
+  <div style="display: flex;">
+    {% for tag in page.tags %}
+      <div class="tag-card"> {{ tag }} </div>
+    {% endfor %}
+  </div>
 
   <article>
     {{ content }}
@@ -74,8 +73,9 @@ layout: default
     </ul>
   </div>
 
+  <!-- Exlude comments for now
   {% if site.data.settings.disqus.comments %}
     {% include disqus.html %}
   {% endif %}
-
+  -->
 </div>
