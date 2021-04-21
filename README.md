@@ -19,10 +19,9 @@ While the development of a full stack website is underway, a static website powe
 
 ```
 git switch gh-pages
-git checkout gh-pages
 ```
 
-Now, you can use the command `git checkout [branch-name]` to switch between the `main` and the `gh-pages` branches and work on both.
+Now, you can use the command `git checkout [branch-name]` to switch between the `main` and the `gh-pages` branches and work on both. For further instructions on collaborating to the website hosted in GitHub Pages read this [file](https://github.com/epelaaez/Quantum-Untangled/blob/gh-pages/README.md).
 
 ## Contributing
 For details on contributing, read [this file](https://github.com/epelaaez/Quantum-Untangled/blob/main/CONTRIBUTING.md).
