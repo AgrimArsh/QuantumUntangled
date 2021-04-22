@@ -4,7 +4,7 @@ title: "Teleportation protocol"
 author: "Emilio Peláez"
 categories: education
 tags: [protocol,circuit]
-image: 
+image: 1_gf3ek1a3_xs7YYeWeJJL4A.jpeg"
 ---
 
 Teleportation may seem as a concept only existent in the world of science fiction — at least for those who are not yet familiar with the concepts of quantum physics and quantum computing. It’s pretty crazy to hear about the teleportation of quantum information the first time. Specially since it involves the instantaneous transfer of quantum data, and I’m pretty sure instantaneous is faster than the speed of light, since entanglement works no matter how far apart the two qubits are.
