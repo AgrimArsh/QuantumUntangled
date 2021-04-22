@@ -20,6 +20,14 @@
   margin: 0 0.5em 0 0;
   padding: 0.2em;
 }
+figure img {
+  vertical-align: top;
+}
+figure figcaption {
+  text-align: center;
+  font-size: small;
+  margin-top: 1em;
+}
 @media (max-width: $container-width) {
   .page-content {
     width: 60vw;
