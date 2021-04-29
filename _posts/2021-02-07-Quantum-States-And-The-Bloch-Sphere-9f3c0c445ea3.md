@@ -75,21 +75,21 @@ Mathematicians and researchers devised a way to predict with a certain degree of
     <figcaption>Quantum state shown as a linear combination of 0 and 1 vector</figcaption>
 </figure>
 
-Thus, with the 0 and 1 state-vectors and their corresponding probability amplitudes, we can represent any two-level quantum state. One might recall that the sum total of the probabilities of any situation must add up to 1. If these probabilities are complex numbers, we may run into trouble (given their quirky arithmetic properties with “i” being involved). However, physicist Max Born devised a namesake rule to alleviate this concern, where he chooses to _square_ and then sum them to find 1, as such:
+Thus, with the 0 and 1 state-vectors and their corresponding probability amplitudes, we can represent any two-level quantum state. One might recall that the sum total of the probabilities of any situation must add up to 1. If these probabilities are complex numbers, we may run into trouble (given their quirky arithmetic properties with $$i$$ being involved). However, physicist Max Born devised a namesake rule to alleviate this concern, where he chooses to _square_ and then sum them to find 1, as such:
 
 <figure>
     <img src="{{ site.github.url }}/assets/images/1__PoW0cxO3qp2IfrEYP6Q0mA.png">
     <figcaption>Amplitudes squared add up to 1</figcaption>
 </figure>
 
-This is known as the **normalization constraint,** since all two-level systems must obey this quality to function as a qubit. A quick note: this notation applied to complex numbers is known as the “squared modulus”, shown here for a complex number “z”:
+This is known as the **normalization constraint,** since all two-level systems must obey this quality to function as a qubit. A quick note: this notation applied to complex numbers is known as the “squared modulus”, shown here for a complex number $$z$$:
 
 <figure>
     <img src="{{ site.github.url }}/assets/images/1__NTdsWqMc9HjgT85y2x6O__Q.png">
     <figcaption>Modulus properties for complex numbers</figcaption>
 </figure>
 
-The resulting equation was successfully of its complex components, leaving us with nice, positive numbers, thus proving the efficacy of the Born rule. Interestingly, setting the above squared modulus of z equal to 1 actually provides us with a unit circle of radius 1 in the Cartesian plane! Finally, we’re starting to see the need for some type of circular/spherical representation- now let’s go into exactly how to extend our understanding of quantum states to 3 dimensions!
+The resulting equation was successfully of its complex components, leaving us with nice, positive numbers, thus proving the efficacy of the Born rule. Interestingly, setting the above squared modulus of $$z$$ equal to 1 actually provides us with a unit circle of radius 1 in the Cartesian plane! Finally, we’re starting to see the need for some type of circular/spherical representation- now let’s go into exactly how to extend our understanding of quantum states to 3 dimensions!
 
 Let’s dive a bit deeper into these complex numbers, which are the coefficients of our basis state-vectors 0 and 1, used to represent the “amplitudes” (a term that reflects their positive and negative natures given that they’re complex) of the probability of measuring them. We recall Euler’s identity:
 
@@ -105,25 +105,25 @@ We’ll use this formula to derive a new representation of our “quantum state�
     <figcaption></figcaption>
 </figure>
 
-In this form, we can see that $$r$$ is being multiplied by the right hand of Euler’s identity, so we can dramatically simplify our representation of a given complex number z sub c, which has its own angle and value of r:
+In this form, we can see that $$r$$ is being multiplied by the right hand of Euler’s identity, so we can dramatically simplify our representation of a given complex number $$z_c$$, which has its own angle and value of $$r$$:
 
 <figure>
     <img src="{{ site.github.url }}/assets/images/1__2mXEhAoP00tIA7l__2XF__mg.png">
     <figcaption></figcaption>
 </figure>
 
-Now redefining our $$ \alpha $$ and “beta” coefficients with our new polar form, we now have a _polar representation_ of our quantum state:
+Now redefining our $$ \alpha $$ and $$\beta$$ coefficients with our new polar form, we now have a _polar representation_ of our quantum state:
 
 <figure>
     <img src="{{ site.github.url }}/assets/images/1__eKmyya14PX8OADqTu8DbMg.png">
     <figcaption></figcaption>
 </figure>
 
-We’re well on our way! Please remember the ultimate goal of all this: we want to find a way to visualize quantum states in a way that captures their information in a simple, quantifiable way, by algebraically manipulating their probability components. We see in this representation that our quantum state has _4 unknowns_\- the “r” and “theta” components of our coefficients “alpha” and “beta”. Let’s try to reduce the number of variables involved to make visualizing quantum states a bit easier.
+We’re well on our way! Please remember the ultimate goal of all this: we want to find a way to visualize quantum states in a way that captures their information in a simple, quantifiable way, by algebraically manipulating their probability components. We see in this representation that our quantum state has _4 unknowns_ \- the $$r$$ and $$\theta$$ components of our coefficients $$\alpha$$ and $$\beta$$. Let’s try to reduce the number of variables involved to make visualizing quantum states a bit easier.
 
-There is a concept in quantum computing known as “[global phase](https://en.wikipedia.org/wiki/Phase_factor)”, where if two quantum states in polar form (which we described above) differ only by a factor of some “e^(i(theta))”, then they are considered indistinguishable for the time being and can be treated as the same mathematically (while it’s actually a bit more complicated, the general concept will be useful in eradicating an extra variable, as we will see).
+There is a concept in quantum computing known as “[global phase](https://en.wikipedia.org/wiki/Phase_factor)”, where if two quantum states in polar form (which we described above) differ only by a factor of some $$ e^{i\theta}$$, then they are considered indistinguishable for the time being and can be treated as the same mathematically (while it’s actually a bit more complicated, the general concept will be useful in eradicating an extra variable, as we will see).
 
-Given that it is thus mathematically unaffected, let’s multiply our quantum state by such a global phase and see what happens. We define a new state _Psi’_ where:
+Given that it is thus mathematically unaffected, let’s multiply our quantum state by such a global phase and see what happens. We define a new state $$\ket{\psi'}$$ where:
 
 <figure>
     <img src="{{ site.github.url }}/assets/images/1__b98XlGunmJG8NYjQJgtkVg.png">
@@ -137,9 +137,9 @@ Evaluating this gives:
     <figcaption></figcaption>
 </figure>
 
-We have completely gotten rid of the “e^i(theta(alpha)” coefficient of the 0 ket, leaving us with just 3 parameters: r(alpha), r(beta), and theta.
+We have completely gotten rid of the $$e^{i\theta_\alpha}$$ coefficient of the 0 ket, leaving us with just 3 parameters: $$r_\alpha$$, $$r_\beta$$, and $$\theta$$.
 
-Let’s take this a step further: remember how the squared probabilities of measuring 0 and 1 have to add up to 1? Why don’t we try that, but instead of using the current polar form of the probability coefficient of 1, let’s go back to the old, Cartesian form of a complex number: z = x+ iy, of whose squared modulus we already derived (check above). Applying the namesake “normalization constraint” to our quantum state gives:
+Let’s take this a step further: remember how the squared probabilities of measuring 0 and 1 have to add up to 1? Why don’t we try that, but instead of using the current polar form of the probability coefficient of 1, let’s go back to the old, Cartesian form of a complex number: $$ z = x+ iy $$, of whose squared modulus we already derived (check above). Applying the namesake “normalization constraint” to our quantum state gives:
 
 <figure>
     <img src="{{ site.github.url }}/assets/images/1__dLxWlRiEUDjR1LV2Hb2Qbg.png">
@@ -150,14 +150,14 @@ This last equation is just a 3d sphere in real space!
 
 If you’ve made it this far, congrats! We have beautifully simplified our original conception of a quantum state into a nice, 3d representation. Our last steps are to come up with a general formula that now only requires 2 inputs instead of the current 3 to be able to plot two-level quantum states.
 
-We first recall the [spherical coordinate system](https://tutorial.math.lamar.edu/classes/calciii/SphericalCoords.aspx), which defines points based on their angle relative to the x, y, and z axes along with their distance from the origin.
+We first recall the [spherical coordinate system](https://tutorial.math.lamar.edu/classes/calciii/SphericalCoords.aspx), which defines points based on their angle relative to the $$x$$, $$y$$, and $$z$$ axes along with their distance from the origin.
 
 <figure>
     <img src="{{ site.github.url }}/assets/images/1__y5mMUA3kC0XC3__8k3j5VUw.png">
     <figcaption></figcaption>
 </figure>
 
-Knowing that r = 1 (radius of a unit sphere is 1), we will represent the form of a quantum state we just derived in spherical coordinates to finally get a representation of the quantum state just in terms of its angles relative to the axis of the Bloch sphere.
+Knowing that $$r = 1$$ (radius of a unit sphere is 1), we will represent the form of a quantum state we just derived in spherical coordinates to finally get a representation of the quantum state just in terms of its angles relative to the axis of the Bloch sphere.
 
 With spherical coordinates defined as such:
 
@@ -166,14 +166,14 @@ With spherical coordinates defined as such:
     <figcaption></figcaption>
 </figure>
 
-Setting z = r(alpha), meaning rcos(theta) = cos(theta), and replacing x and y in our quantum state _Psi’,_ we get;
+Setting $$r = 1$$ which means $$r\cos(\theta) = \cos(\theta)$$, and replacing $$x$$, $$y$$ and $$z$$ in our quantum state $$\ket{\psi'}$$ we get:
 
 <figure>
     <img src="{{ site.github.url }}/assets/images/1__F4I4caRLjY3WdRo0PnHp2Q.png">
     <figcaption></figcaption>
 </figure>
 
-Aha! Do you recognize Euler’s identity at the coefficient of the ket 1, multiplied by sin(theta)? Replacing like so, we get:
+Aha! Do you recognize Euler’s identity at the coefficient of $$\ket{1}$$, multiplied by $$\sin\theta$$? Replacing like so, we get:
 
 <figure>
     <img src="{{ site.github.url }}/assets/images/1__cTRkNx2cdxNPnl3IVKkwug.png">
@@ -182,7 +182,7 @@ Aha! Do you recognize Euler’s identity at the coefficient of the ket 1, multip
 
 Perfect. This isn’t the full sphere, however. We need to use half angles and restrict the ranges of both of the angles such that we can now represent any state we want on the sphere.
 
-Given the angles _theta_ and _phi_ restricted as such:
+Given the angles $$\theta$$ and $$\phi$$ restricted as such:
 
 <figure>
     <img src="{{ site.github.url }}/assets/images/1__k__xmpdT92HVJ__k4OhKE6__g.png">
@@ -196,7 +196,7 @@ We finally get the general form of a quantum state lying in the Bloch sphere, us
     <figcaption></figcaption>
 </figure>
 
-Also note that we can linearly combine the 0 and 1 kets like before using the laws of vector addition to show a quantum state vectorially:
+Also note that we can linearly combine $$\ket{0}$$ and $$\ket{1}$$ like before using the laws of vector addition to show a quantum state vectorially:
 
 <figure>
     <img src="{{ site.github.url }}/assets/images/1__B7A8BjPQgh__dj5sItqbepQ.png">
@@ -209,42 +209,42 @@ Let’s recap what we just did. We established the notion of quantum states as s
 
 Let’s try to plot a quantum state on the Bloch sphere.
 
-Supposed you were asked to plot the quantum state “ket 1”. As a reminder, the “1 state” is defined as follows, using bra-ket notation:
+Supposed you were asked to plot the quantum state $$\ket{1}$$. As a reminder, the “1 state” is defined as follows, using bra-ket notation:
 
 <figure>
     <img src="{{ site.github.url }}/assets/images/1__omAYE__UE7H2fud5kpgceEw.png">
     <figcaption></figcaption>
 </figure>
 
-We want to find the angles _theta_ and _phi_ which satisfy the general form of the Bloch sphere. That is,
+We want to find the angles $$\theta$$ and $$\phi$$ which satisfy the general form of the Bloch sphere. That is,
 
 <figure>
     <img src="{{ site.github.url }}/assets/images/1__5b__3fp7A7Kfv9sU27lCy6A.png">
     <figcaption></figcaption>
 </figure>
 
-Do you recall a way to find these two angles with our given information? Exactly! We need to set up a [system of equations](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:systems-of-equations) which correlate the top and bottom values of the general Bloch vector, with the corresponding values in the vector form of our given quantum state- in this case, the “1 state”, as such:
+Do you recall a way to find these two angles with our given information? Exactly! We need to set up a [system of equations](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:systems-of-equations) which correlate the top and bottom values of the general Bloch vector, with the corresponding values in the vector form of our given quantum state- in this case, $$\ket{1}$$, as such:
 
 <figure>
     <img src="{{ site.github.url }}/assets/images/1__LKh5PIvjhYItNZ9__pHsLog.png">
     <figcaption></figcaption>
 </figure>
 
-We begin by solving the first equation for _theta_:
+We begin by solving the first equation for $$\theta$$:
 
 <figure>
     <img src="{{ site.github.url }}/assets/images/1__lAA5C5xY1CRFulZ__8FqXDg.png">
     <figcaption></figcaption>
 </figure>
 
-Then substituting this value of theta into the second equation, yielding _phi_:
+Then substituting this value of theta into the second equation, yielding $$\phi$$:
 
 <figure>
     <img src="{{ site.github.url }}/assets/images/1__1pime05aq8XodiyU9Fq6bA.png">
     <figcaption></figcaption>
 </figure>
 
-Having found our values of _theta_ and _phi_, we plug them back into the general Bloch vector form to obtain the corresponding vector in the sphere:
+Having found our values of $$/theta$$ and $$/phi$$, we plug them back into the general Bloch vector form to obtain the corresponding vector in the sphere:
 
 <figure>
     <img src="{{ site.github.url }}/assets/images/1__I9RnaM9NALt1CRhdYr3iHA.png">
@@ -258,7 +258,7 @@ Plotting this on the Bloch sphere looks as follows:
     <figcaption></figcaption>
 </figure>
 
-Can you see why this makes sense? As mentioned before, the Bloch sphere is a visual representation of quantum states, based off their property of measurement, showing their degree of superposition between 0 and 1. If we consider the positive z-axis as the 0 state and negative z-axis as the 1 state, then it would make sense that absolutely no portion of the vector should lie anywhere outside of the negative z axis, since there’s a 100% probability of measuring a “1” in this state and nothing else! Now try plotting some states on your own: how about the “0” ket? How about making both the coefficients “alpha “ and “beta” set to 1/sqrt(2)? Try it out!
+Can you see why this makes sense? As mentioned before, the Bloch sphere is a visual representation of quantum states, based off their property of measurement, showing their degree of superposition between 0 and 1. If we consider the positive $$z$$-axis as the 0 state and negative $$z$$-axis as the 1 state, then it would make sense that absolutely no portion of the vector should lie anywhere outside of the negative $$z$$ axis, since there’s a 100% probability of measuring a “1” in this state and nothing else! Now try plotting some states on your own: how about the “0” ket? How about making both the coefficients $$\alpha$$ and $$\beta$$ set to $$1/\sqrt{2}$$? Try it out!
 
 ### Where Do I Go From Here? Next Steps…
 
