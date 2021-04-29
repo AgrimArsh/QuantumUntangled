@@ -64,8 +64,8 @@ layout: default
                   </div>
                   <div class="related-meta">
                     {{ mypost.date | date: "%B %-d, %Y" }}
-                    {% if page.author %}
-                      by {{ page.author }}
+                    {% if mypost.author %}
+                      by {{ mypost.author }}
                     {% endif %}
                   </div>
                 </a>

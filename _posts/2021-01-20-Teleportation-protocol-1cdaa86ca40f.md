@@ -24,12 +24,12 @@ The quantum teleportation protocol is a fundamental part of many quantum algorit
 This protocol is useful to overcome the difficulties imposed by the [no-cloning theorem](https://en.wikipedia.org/wiki/No-cloning_theorem), which tells us that it is not possible to create an exact copy of a quantum state. Which means we cannot copy the state of one qubit into another and have two copies of the same state, but we can teleport it — and destroy the original state. In fact, most uses of the teleportation protocol are to transfer the state of a qubit into another within a single QPU rather than across large distances. This is useful since many QPUs don’t have all their qubits connected to each other, which makes it impossible for some qubits to interact with others without the use of teleportation.
 
 Now, let’s go ahead and take a look at how this works. First, we are going to see how the circuit looks like.
-
+$$ \newcommand{\ket}[1]{\left|{#1}\right\rangle} $$
 <figure>
     <img src="{{ site.github.url }}/assets/images/0_6FYFgtRh25QwbNjs.jpg">
     <figcaption>Circuit implementing quantum teleportation protocol</figcaption>
 </figure>
-$$ \newcommand{\ket}[1]{\left|{#1}\right\rangle} $$
+
 The first thing we do is define three states $$\ket{\psi}$$, $$ \ket{\phi} $$, and $$ \ket{\omega} $$. $$ \ket{\psi} $$ will be the state we want to send, $$ \ket{\phi} $$ will be an ancillary qubit, and $$ \ket{\omega} $$ will be the qubit to which we want to send the state originally in $$ \ket{\psi} $$. Summarising:
 
 <figure>
