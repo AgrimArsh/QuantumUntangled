@@ -15,29 +15,29 @@ We will be looking at a really simple example that just involves two qubits. One
 
 What we want to achieve with this requirement is that applying the operation to our target qubit doesn’t change its state, but only affects its phase. Thus, applying the operator to our qubit would look something like this:
 
-<img src="{{ site.github.url }}/assets/images/1_8G9bPII9sWOUKzwlvk-tpw.png">
+<img src="{{ site.url }}/assets/images/1_8G9bPII9sWOUKzwlvk-tpw.png">
 
 In this example, U is the operation (a matrix) that is acting on the qubit psi (a vector represented by a ket). As you can see, the operator only adds a phase to our qubit, but doesn’t change its state. This value that the qubit psi is being multiplied by is the phase that will be kicked back to our control qubit.
 
 With this requirement established, we can get into the circuit. First of all, let’s look at what the circuit looks like, and we will go through what each gate does next.
 
-<img src="{{ site.github.url }}/assets/images/1_rZQ_CqPOe7zKAnLbVXxNRg.jpeg">
+<img src="{{ site.url }}/assets/images/1_rZQ_CqPOe7zKAnLbVXxNRg.jpeg">
 
 First, our top qubit goes through a Hadamard gate and the bottom qubit goes through a Pauli-X gate, giving us the following state:
 
-<img src="{{ site.github.url }}/assets/images/1_d6dQftTm0KRLat7ihdXq2Q.png">
+<img src="{{ site.url }}/assets/images/1_d6dQftTm0KRLat7ihdXq2Q.png">
 
 We can see that we have an equal superposition of the states 01 and 11, where the first number corresponds to the qubit q0 and the second number to the qubit 11. This state is produced because the Hadamard gate puts our top qubit into an equal superposition between states 0 and 1 and the Pauli-X gate simply puts our bottom qubit into the state 1 no matter what.
 
 Here is when it gets interesting. The qubits go through a controlled phase gate, with the control qubit being the top one and the target qubit the bottom one. The names control and target are misleading in this case, since the qubit that ends up changing its phase is the **control** qubit. Remember that a controlled gate acts only when the control qubit is in state 1, so the phase rotation is only applied in this case. When passing through this gate, the resulting state is the following:
 
-<img src="{{ site.github.url }}/assets/images/1_tdJ210uCJgowK-POdRakLA.png">
+<img src="{{ site.url }}/assets/images/1_tdJ210uCJgowK-POdRakLA.png">
 
 Remember the requirement we talked about earlier? Well, you can see it in action right here. The phase gate was applied to the state 11 (since the top qubit, which acts as the control, is in the state 1) but it only added a phase to the state. In this case, $$\theta = \pi / 4$$, following the formula we showed above. Another important remark is that the states are not entangled since we can write them as a tensor product of the two qubits.
 
 We can see the effect of the phase with the statevector simulation that Qiskit gives us, notice that the top qubit (qubit 0) has a phase rotation, while the target qubit is right in the 1 state without any rotation.
 
-<img src="{{ site.github.url }}/assets/images/1_22PrHbfEgqc4df7SV83m5A.jpeg">
+<img src="{{ site.url }}/assets/images/1_22PrHbfEgqc4df7SV83m5A.jpeg">
 
 This shows that the phase was kicked back into our top qubit rather than being applied to the bottom qubit. This is the effect we wanted to achieve, we applied a phase rotation to our top qubit but the qubit that actually was acted on by a phase rotation gate was the bottom qubit.
 

@@ -26,21 +26,21 @@ This protocol is useful to overcome the difficulties imposed by the [no-cloning 
 Now, let’s go ahead and take a look at how this works. First, we are going to see how the circuit looks like.
 $$ \newcommand{\ket}[1]{\left|{#1}\right\rangle} $$
 <figure>
-    <img src="{{ site.github.url }}/assets/images/0_6FYFgtRh25QwbNjs.jpg">
+    <img src="{{ site.url }}/assets/images/0_6FYFgtRh25QwbNjs.jpg">
     <figcaption>Circuit implementing quantum teleportation protocol</figcaption>
 </figure>
 
 The first thing we do is define three states $$\ket{\psi}$$, $$ \ket{\phi} $$, and $$ \ket{\omega} $$. $$ \ket{\psi} $$ will be the state we want to send, $$ \ket{\phi} $$ will be an ancillary qubit, and $$ \ket{\omega} $$ will be the qubit to which we want to send the state originally in $$ \ket{\psi} $$. Summarising:
 
 <figure>
-    <img src="{{ site.github.url }}/assets/images/0_kVzZd8ROudJ_fS1U.png">
+    <img src="{{ site.url }}/assets/images/0_kVzZd8ROudJ_fS1U.png">
     <figcaption>The three qubits we are going to use</figcaption>
 </figure>
 
 The gates before the first barrier entangle the ancillary qubit with the receiver qubit, creating the first bell state. This is a fairly common trick in quantum computing and I recommend you become familiar with it if you are not already, [this](https://github.com/epelaaez/QuantumLibrary/tree/master/algorithms/bell_state) may be a good source to start with. After creating this bell state, we have the following state involving the three qubits:
 
 <figure>
-    <img src="{{ site.github.url }}/assets/images/0_NjR3OAN-YmJRJ3Eq.png">
+    <img src="{{ site.url }}/assets/images/0_NjR3OAN-YmJRJ3Eq.png">
     <figcaption>Entangling ancillary and receiver qubit</figcaption>
 </figure>
 
@@ -49,7 +49,7 @@ In the equation above we are using the tensor product to indicate that the three
 The gates between the first barrier and the second one only act on the first qubit: the sender qubit. This gates prepare the desired state to send, so they can be anything the sender wants them to be. In this example we are applying a Hadamard gate, followed by a phase rotation of $$ \pi/4 $$ radians, and another Hadamard gate at the end. The following equations show how the state is modified:
 
 <figure>
-    <img src="{{ site.github.url }}/assets/images/0_W3XLziuNEFjghcPd.png">
+    <img src="{{ site.url }}/assets/images/0_W3XLziuNEFjghcPd.png">
     <figcaption>Preparing sender qubit to the state we are going to send</figcaption>
 </figure>
 
@@ -60,21 +60,21 @@ Note that in this case, we are only focusing on the first qubit, rather than in 
 Before going into the next gate, let’s see the state of our three qubits together. To do this, we can use the state of $$\ket{\psi}$$ we prepared in the above equation and plug it in the first equation. The following equation shows us this state:
 
 <figure>
-    <img src="{{ site.github.url }}/assets/images/0_rkVNaMzMxc_u40Cu.png">
+    <img src="{{ site.url }}/assets/images/0_rkVNaMzMxc_u40Cu.png">
     <figcaption>State of our whole system</figcaption>
 </figure>
 
 Now, the following part of the circuit is going to entangle our sender and ancillary qubits with a CNOT gate and then apply a Hadamard gate to the sender qubit only. To get a better idea of what is happening, we are going to apply this operators to our whole state, so we can see the relations between the three qubits. $$ \ket{\psi\phi\omega} $$ in the following equation is just a short way of reffering to the state described in the above equation. The following equation shows us what happens to our state:
 
 <figure>
-    <img src="{{ site.github.url }}/assets/images/0_pu_r3Gzk_TpJ8cFp.png">
+    <img src="{{ site.url }}/assets/images/0_pu_r3Gzk_TpJ8cFp.png">
     <figcaption>Entangling sender and ancillary qubit, then applying Hadamard to sender qubit</figcaption>
 </figure>
 
 Here it gets a little bit tricky, since we are going to measure $$ \ket{\psi} $$ and $$ \ket{\phi} $$. As you may know, there are 4 possible states we might end up with when measuring these two qubits, these are $$ \ket{00} $$, $$ \ket{01} $$, $$ \ket{10} $$ and $$ \ket{11} $$. And for each of this four states, you can have either $$ \ket{0} $$ or $$ \ket{1} $$ for the receiver qubit. To help illustrate the different possibilites, let’s look at what state $$ \ket{\omega} $$ will be depending on the state we measure in $$ \ket{\psi\phi} $$.
 
 <figure>
-    <img src="{{ site.github.url }}/assets/images/0_1VUA2G4s0phMTy8O.png">
+    <img src="{{ site.url }}/assets/images/0_1VUA2G4s0phMTy8O.png">
     <figcaption>The four possibilites of the receiver qubit depending on the state we measure on the sender and ancillary qubit</figcaption>
 </figure>
 
@@ -85,28 +85,28 @@ And this relation between the three qubits is what we are going to exploit next.
 First, the case in which $$ \ket{\psi\phi} = \ket{00} $$. No further gates are applied, so we already have the following state:
 
 <figure>
-    <img src="{{ site.github.url }}/assets/images/0_hh2SkDvWSCVlKYvY.png">
+    <img src="{{ site.url }}/assets/images/0_hh2SkDvWSCVlKYvY.png">
     <figcaption>First possibility, no further gates are applied</figcaption>
 </figure>
 
 In the case that $$ \ket{\psi\phi} = \ket{01} $$, we only apply a Pauli-X gate:
 
 <figure>
-    <img src="{{ site.github.url }}/assets/images/0_guk0XZrwiyAwCprZ.png">
+    <img src="{{ site.url }}/assets/images/0_guk0XZrwiyAwCprZ.png">
     <figcaption>Second possibility, Pauli-X gate is applied</figcaption>
 </figure>
 
 The next case is that $$ \ket{\psi\phi} = \ket{10} $$, in this case we only apply a Pauli-Z gate:
 
 <figure>
-    <img src="{{ site.github.url }}/assets/images/0_4-x9M8iA2LPpZdd4.png">
+    <img src="{{ site.url }}/assets/images/0_4-x9M8iA2LPpZdd4.png">
     <figcaption>Third possibility, Pauli-Z gate is applied</figcaption>
 </figure>
 
 Finally, the case in which $$ \ket{\psi\phi} = \ket{11} $$, here we apply a Pauli-X gate folowed by a Pauli-Z gate:
 
 <figure>
-    <img src="{{ site.github.url }}/assets/images/0_SJfDUuhtlPDFc3Pj.png">
+    <img src="{{ site.url }}/assets/images/0_SJfDUuhtlPDFc3Pj.png">
     <figcaption>Fourth possibility, Pauli-X gate is applied followed by Pauli-Z gate</figcaption>
 </figure>
 
@@ -117,7 +117,7 @@ In this example, we have three more gates in our circuit. This gates are not rea
 This part is not included in practical applications of the teleportation protocol, since the qubit is often used to perform other operations, but we do it in this case to ensure that we teleported our qubit correctly. This can be confirmed with the histogram of the circuit, where the leftmost bit corresponds to the receiving qubit and we see we measure it to be in state $$ \ket{0} $$ everytime.
 
 <figure>
-    <img src="{{ site.github.url }}/assets/images/0_Is1hIIDSUKmIwWZS.jpg">
+    <img src="{{ site.url }}/assets/images/0_Is1hIIDSUKmIwWZS.jpg">
     <figcaption>Histogram showing the results of runing this circuit. Notice how we always got 0 in the qubit we intended to do so!</figcaption>
 </figure>
 
@@ -128,7 +128,7 @@ Now, let’s explore if this protocol actually allows for faster than light tran
 ### Faster than light?
 
 <figure>
-    <img src="{{ site.github.url }}/assets/images/1_gf3ek1a3_xs7YYeWeJJL4A.jpeg">
+    <img src="{{ site.url }}/assets/images/1_gf3ek1a3_xs7YYeWeJJL4A.jpeg">
     <figcaption>Image by 
         <a href="https://pixabay.com/users/ray_shrewsberry-7673058/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=5605724" target="_blank">Ray Shrewsberry</a> 
     from 
