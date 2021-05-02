@@ -5,7 +5,7 @@ paginate: 5
 title: Quantum Untangled
 description: An open-source community making quantum computing accesible.
 baseurl: ""
-url: "http://www.quantumuntangled.org"
+url: "https://www.quantumuntangled.org"
 
 # Build settings
 markdown:    kramdown

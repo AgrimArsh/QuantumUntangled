@@ -10,6 +10,7 @@
   color: $brand-color;
   padding: 0px 10px 0px;
   text-decoration: none;
+  line-height: normal !important;
 }
 @media (max-width: $container-width) {
   .footer {
