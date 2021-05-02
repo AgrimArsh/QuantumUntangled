@@ -3,4 +3,4 @@ layout: misc
 title: Contact
 ---
 
-Contact us at ...
+You can contact us by joining our Discord server! Join [here](https://discord.gg/ZCVtHTbepq).
