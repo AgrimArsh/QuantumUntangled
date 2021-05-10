@@ -16,8 +16,8 @@ You can contact us by joining our Discord server, join [here](https://discord.gg
         <input type="text" id="lname" name="lastname" placeholder="Last name" required>
         <label for="email">Your email:</label>
         <input type="email" id="email" name="_replyto" placeholder="Email" required>
-        <label for="subject">Message:</label>
-        <textarea id="subject" name="subject" placeholder="Write your message here" style="height: 5em;"></textarea>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Write your message here" style="height: 5em;"></textarea>
         <input type="submit" value="Submit">
     </form>
 </div>
