@@ -1,14 +1,13 @@
 ---
 layout: post
-title: "One Atom, Multiple Faces: Superposition, Localisation, and Uncertainty"
+title: "Superposition, Localisation, and Uncertainty"
 author: "Agrim Arsh"
 categories: education
-tags:   [quantum mechanics,physics]
+tags:   [mechanics,physics]
 image: 1_mD6oQpCBlaGLZkO8rp5MWg.jpeg
 ---
-
 <figure>
-    <img src="{{ site.url }}/assets/images/1_mD6oQpCBlaGLZkO8rp5MWg.jpeg">
+    <img src="{{ site.url }}/assets/images/1_mD6oQpCBlaGLZkO8rp5MWg.jpeg" style="width: 100% !important; max-width: 100% !important; margin-top: 1em;">
     <figcaption>Image: © Phys.org</figcaption>
 </figure>
 
@@ -33,7 +32,7 @@ Now, we come onto the real prospect of this article- intuition. So, let’s defi
 
 Let me ask you a question now, where *exactly* is the particle? And as if immediately, you might answer, at (around) $$(-2.5, 1)$$, and you’d be right! *But*, at the same time, let me ask you where *exactly* is the wave? And you would answer… wait, turns out, you can’t answer! And that’s all right. You can’t accurately tell where is the wave located, can you?
 
-One thing you might consider is increasing the scale of the units on which we have defined the graph. Such that, on zooming out *very very* much, the wave seems to be a point. But again, when you zoom out a bit, you lose at least some information about accuracy (just like- looking on the natural number scale with a one 1cm gap in between two natural numbers, you lose the information about where *exactly* $$√2$$ or $$1.01001000100001$$ is present). And also, there is even a limit to how much you can zoom out, as if you zoom out too much, you’d no longer be in a quantum world! So, in a nutshell, you *can* talk about the not-so-exact position of the wave by zooming out.
+One thing you might consider is increasing the scale of the units on which we have defined the graph. Such that, on zooming out *very very* much, the wave seems to be a point. But again, when you zoom out a bit, you lose at least some information about accuracy (just like- looking on the natural number scale with a one 1cm gap in between two natural numbers, you lose the information about where *exactly* $$\sqrt{2}$$ or $$1.01001000100001$$ is present). And also, there is even a limit to how much you can zoom out, as if you zoom out too much, you’d no longer be in a quantum world! So, in a nutshell, you *can* talk about the not-so-exact position of the wave by zooming out.
 
 Now, the wave and the particle, are they different quantum objects? No, they are not. They are just two different representations of the *same* object. So, in one representation of the object, we have a specific position, but in the other, we don’t. So, which one is correct? Turns out both are equally correct, and this is what Quantum Mechanics is all about. *Superposition is all about a particle showing the property of a wave.* Because the wave nature, of the particle, cannot have an exact position, the particle has to follow this, it cannot have an exact position. And this *exactly* (no ambiguity whatsoever) what we mean by ‘existing in multiple states/positions at once’, a concept which people know by the name of ‘superposition’.
 
