@@ -2,7 +2,6 @@
 layout: post
 title: "Superposition, Localisation, and Uncertainty"
 author: "Agrim Arsh"
-categories: education
 tags:   [mechanics,physics]
 image: 1_mD6oQpCBlaGLZkO8rp5MWg.jpeg
 ---
