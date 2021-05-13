@@ -18,7 +18,7 @@ First, let’s just see what superposition is. Superposition is defined on [Wiki
 
 Makes sense? No? Then, let’s boil it down to a handful of words rather than seeing the technical words. This definition covers the following aspects of superposition-
 
-1. The system needs to be a Quantum Mechanical one. This just means that the system needs to be of a size of the order less than $$10^-9$$ m. At the bigger scales, though these properties *do* exist, yet their applications are too small to be witnessed by the naked eye, or even through the instruments (more on this later).
+1. The system needs to be a Quantum Mechanical one. This just means that the system needs to be of a size of the order less than $$10^{-9}$$ m. At the bigger scales, though these properties *do* exist, yet their applications are too small to be witnessed by the naked eye, or even through the instruments (more on this later).
 2. The system exists in multiple states at the same time. This covers the main aspect of superposition and tells us that the considered quantum state inhibits two differing properties at the same time. The properties may be in the form of the position of the particles, or their momentum, or (in the case of quantum bits, or qubits) their bit value.
 3. This behavior is followed until a measurement is undertaken. This covers yet another aspect of superposition, that, quantum superposition is acting on a particle/wave, only as long as it is not measured (to be covered in a future article).
 
