@@ -52,24 +52,26 @@ layout: default
           {% if listed_posts_urls contains mypost.url %}
           {% else %}
             <li>
-              <h3>
-                <a href="{{ site.url }}{{ mypost.url }}">
-                  <div class="related-thumbnail">
-                    {% if mypost.image %}
-                      <img src="{{ site.url }}/assets/images/{{ mypost.image }}">
-                    {% endif %}
-                  </div>
-                  <div class="related-title">
-                    {{ mypost.title }}
-                  </div>
-                  <div class="related-meta">
-                    {{ mypost.date | date: "%B %-d, %Y" }}
-                    {% if mypost.author %}
-                      by {{ mypost.author }}
-                    {% endif %}
-                  </div>
-                </a>
-              </h3>
+              <div class="related-item">
+                <h3>
+                  <a href="{{ site.url }}{{ mypost.url }}">
+                    <div class="related-thumbnail">
+                      {% if mypost.image %}
+                        <img src="{{ site.url }}/assets/images/{{ mypost.image }}">
+                      {% endif %}
+                    </div>
+                    <div class="related-title">
+                      {{ mypost.title }}
+                    </div>
+                    <div class="related-meta">
+                      {{ mypost.date | date: "%B %-d, %Y" }}
+                      {% if mypost.author %}
+                        by {{ mypost.author }}
+                      {% endif %}
+                    </div>
+                  </a>
+                </h3>
+              </div>
             </li>
             {% assign listed_posts_urls = listed_posts_urls | push: mypost.url %}
           {% endif %}
