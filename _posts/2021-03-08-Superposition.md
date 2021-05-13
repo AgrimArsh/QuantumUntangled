@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 layout: post
 title: "Superposition, Localisation, and Uncertainty"
@@ -46,6 +45,6 @@ You might ask, what is the relation of frequency which momentum, and it is true 
 
 Therefore, the uncertainty in momentum and uncertainty position are related as we saw in this section. This is what entails the principle of ‘Heisenberg’s Uncertainty Principle’, a foundational base of modern Quantum Mechanics.
 
-In a nutshell, this is what entails the concept of superposition and uncertainty as a whole. Why people consider this hard to digest is because they consider either of the representation of a quantum object- either the wave aspect, or the particle aspect. The key to understanding is to entail each of them as an integral part of the quantum object, without which neither is complete without the other.
+In a nutshell, this is what entails the concept of superposition and uncertainty as a whole. Why people consider this hard to digest is because they consider either of the representation of a quantum object — either the wave aspect, or the particle aspect. The key to understanding is to entail each of them as an integral part of the quantum object, without which neither is complete without the other.
 
 The physical part of ‘uncertainty’ is what is entailed here. This is a direct consequence of the mathematics of uncertainty, which leads to the famous inequation: $$\Delta x·\Delta p ≥ \frac{h}{4\pi}$$, where $$Δ$$ stands for the uncertainties. It is important to note that the effects of these quantum and “unintuitive” effects are equally in effect as you read this article or take a stroll in a park. But the reason why we don’t see people eating pies and waffles at the same time or cats both dead and alive is because of the *very, very, very* small wave-like properties of classical objects; and this is what prevents you from ‘Strolling the Quantum Lane’ and strolling a Boston Lane at the same time!
